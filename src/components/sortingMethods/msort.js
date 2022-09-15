@@ -78,7 +78,7 @@ export function getMergeSortAnimations(array) {
     }
     while (j <= endIdx) {
       animations.push([j, j]);
-      animations.push([j, j]);
+      animations.push([j, j]);  
       animations.push([k, auxiliaryArray[j]]);
       mainArray[k++] = auxiliaryArray[j++];
     }
