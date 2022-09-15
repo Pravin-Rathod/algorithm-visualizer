@@ -1,0 +1,64 @@
+body{
+  margin: 0%;
+  background-color: black;
+}
+
+.nav{
+  display: flex;
+  margin:20px;
+  justify-content: center;
+  align-items: center;
+} 
+
+.btn{
+  background-color: white;
+  height: fit-content;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.sbtn{
+  background-color: white;
+  height: fit-content;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.array-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.array-item {
+  width: 10%;
+  background-color:cyan;
+  margin: 0px 2px;
+}
+
+
+.footer-container{
+  position:absolute;
+   bottom:0;
+   width:100%;
+   margin: 10px 0px;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  color: white;
+}
+
+.footer button{
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.footer-input{
+  display: flex;
+  margin-left: 20px;  
+}
