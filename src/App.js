@@ -4,6 +4,7 @@ import { selectionSortAnimation } from "./components/sortingMethods/selectionSor
 import { insertionSortAnimation } from "./components/sortingMethods/insertionSort";
 // import { mergeSortAnimation } from "./components/sortingMethods/mergeSort";
 import { mergeSort } from "./components/sortingMethods/msort";
+import { quickSortAnimation } from "./components/sortingMethods/quicksort";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ export default class App extends React.Component {
           <button id="selectionSort" onClick={() => selectionSortAnimation(array,this.state.maxSpeed)} className="sbtn">SelectionSort</button>
           <button id="insertionSort" onClick={() => insertionSortAnimation(array,this.state.maxSpeed)} className="sbtn">InsertionSort</button>
           <button id="mergeSort" onClick={() => mergeSort(array,this.state.maxSpeed)} className="sbtn">MergeSort</button>
+          <button id="quickSort" onClick={() => quickSortAnimation(array,this.state.maxSpeed)} className="sbtn">QuickSort</button>
         </div>
         <hr></hr>
 
