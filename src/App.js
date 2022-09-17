@@ -28,28 +28,21 @@ export default class App extends React.Component {
     }
     this.setState({ array });
   }
-
-  getArray() {
-    return this.state.array;
-  }
   
-  render() {
-    let array = [];
-    array = this.getArray()
-
+  render() {    
     return (
-      <div>
+      <div>        
         <div className="nav">
-          <button id="bubbleSort" onClick={() => bubbleSortAnimation(array,this.state.maxSpeed)} className="sbtn">BubbleSort</button>
-          <button id="selectionSort" onClick={() => selectionSortAnimation(array,this.state.maxSpeed)} className="sbtn">SelectionSort</button>
-          <button id="insertionSort" onClick={() => insertionSortAnimation(array,this.state.maxSpeed)} className="sbtn">InsertionSort</button>
-          <button id="mergeSort" onClick={() => mergeSort(array,this.state.maxSpeed)} className="sbtn">MergeSort</button>
-          <button id="quickSort" onClick={() => quickSortAnimation(array,this.state.maxSpeed)} className="sbtn">QuickSort</button>
+          <button id="bubbleSort" onClick={() => bubbleSortAnimation(this.state.array,this.state.maxSpeed)} className="sbtn">BubbleSort</button>
+          <button id="selectionSort" onClick={() => selectionSortAnimation(this.state.array,this.state.maxSpeed)} className="sbtn">SelectionSort</button>
+          <button id="insertionSort" onClick={() => insertionSortAnimation(this.state.array,this.state.maxSpeed)} className="sbtn">InsertionSort</button>
+          <button id="mergeSort" onClick={() => mergeSort(this.state.array,this.state.maxSpeed)} className="sbtn">MergeSort</button>
+          <button id="quickSort" onClick={() => quickSortAnimation(this.state.array,this.state.maxSpeed)} className="sbtn">QuickSort</button>
         </div>
         <hr></hr>
 
         <div className="array-container">
-          {array.map((value, idx) => (
+          {this.state.array.map((value, idx) => (
             <div className="array-item" key={idx} style={{ height: `${value}px` }}></div>
           ))}
         </div>
