@@ -1,10 +1,14 @@
+import { disableAll } from "../visualizer";
+
 const PRIMARY_COLOR = 'turquoise';
 const SECONDARY_COLOR = 'red';
 
 function mergeSort(array,maxSpeed) {
+  disableAll(true);
     const animations = getMergeSortAnimations(array);
     let speed = 1000 - maxSpeed;
-    for (let i = 0; i < animations.length; i++) {
+    let i=0;
+    for ( i = 0; i < animations.length; i++) {
       const arrayBars = document.getElementsByClassName('array-item');
       const isColorChange = i % 3 !== 2;
       if (isColorChange) {
@@ -24,6 +28,9 @@ function mergeSort(array,maxSpeed) {
         }, i * speed);
       }
     }
+    setTimeout(()=>{
+      disableAll(false);
+    },i*speed);
 }
 
 export function getMergeSortAnimations(array) {
